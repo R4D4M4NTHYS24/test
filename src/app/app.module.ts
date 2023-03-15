@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
@@ -22,6 +24,8 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     BrowserAnimationsModule,
     MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

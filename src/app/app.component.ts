@@ -1,5 +1,11 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { MatTableDataSource } from '@angular/material/table';
+
+interface CryptoPrice {
+  name: string;
+  price: number;
+}
 
 @Component({
   selector: 'app-root',
@@ -7,5 +13,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'test';
+  displayedColumns: string[] = ['name', 'price'];
+  dataSource: MatTableDataSource<CryptoPrice> =
+    new MatTableDataSource<CryptoPrice>();
 }
