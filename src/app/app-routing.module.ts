@@ -5,6 +5,11 @@ import { CryptoPricesComponent } from './crypto-prices/crypto.prices.component';
 
 const routes: Routes = [
   {
+    path: '',
+    redirectTo: '/',
+    pathMatch: 'full',
+  },
+  {
     path: 'crypto-prices',
     component: CryptoPricesComponent,
   },
