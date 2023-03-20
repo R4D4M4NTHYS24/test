@@ -2,7 +2,7 @@
   <img src="assets/logo.webp" alt="Logo" />
   <ul>
     <li><a routerLink="/">Index</a></li>
-    <li><a routerLink="/crypto-prices">Crypto Prices</a></li>
+    <li><a routerLink="/crypto-prices">Divisas</a></li>
   </ul>
 </nav>
 
@@ -12,3 +12,19 @@
   integrar nuestra infraestructura tu negocio podrá aumentar sus ingresos,
   atraer más usuarios, y aprovechar el potencial del blockchain y el Web 3.0.
 </h1>
+
+<body>
+  <div class="wrapper">
+    <div class="gallery">
+      <div class="item" *ngFor="let item of data">
+        <h2>{{ item.name }}</h2>
+        <p>{{ item.current_price }}</p>
+        <div class="imgs">
+          <img [src]="item.image" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--<script src="script.js"></script>-->
+</body>
