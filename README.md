@@ -1,27 +1,45 @@
-# Test
+Kravata Angular Project Document
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.2.
+Introduction:
+The Kravata Angular project has been created with the purpose of demonstrating the functionality of an online payment platform for a blockchain startup. The Angular framework has been used and the package.json file has been configured to include the necessary dependencies for the project.
 
-## Development server
+Technical specifications:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Project name: Angular Kravata
+Version: 0.0.0
+Framework used: Angular
+Dependencies:
+@angular/animations: ^15.2.0
+@angular/cdk: ^15.2.2
+@angular/common: ^15.2.0
+@angular/compiler: ^15.2.0
+@angular/core: ^15.2.0
+@angular/forms: ^15.2.0
+@angular/material: ^15.2.2
+@angular/platform-browser: ^15.2.0
+@angular/platform-browser-dynamic: ^15.2.0
+@angular/router: ^15.2.0
+rxjs: ~7.8.0
+tslib: ^2.3.0
+zone.js: ~0.12.0
+Development dependencies:
+@angular-devkit/build-angular: ^15.2.2
+@angular/cli: ~15.2.2
+@angular/compiler-cli: ^15.2.0
+@types/jasmine: ~4.3.0
+jasmine-core: ~4.5.0
+karma: ~6.4.0
+karma-chrome-launcher: ~3.1.0
+karma-coverage: ~2.2.0
+karma-jasmine: ~5.1.0
+karma-jasmine-html-reporter: ~2.0.0
+typescript: ~4.9.4
+Scripts:
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+ng: Allows you to execute Angular commands.
+start: Starts the local server for the project.
+build: Compiles the project to be deployed on a server.
+watch: Builds the project and keeps it in watch mode to detect changes.
+test: Execute the unit tests of the project.
+Conclusions:
+The Kravata Angular project has been created with the aim of demonstrating the functionality of an online payment platform for a blockchain startup. The Angular framework has been used and the package.json file has been configured to include the necessary dependencies. The defined scripts allow the execution of different commands to facilitate the development and compilation of the project.
