@@ -1,6 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { enviroment } from 'src/enviroments/enviroment';
+import { environment } from 'src/environments/environment';
 import { MatTableDataSource } from '@angular/material/table';
 
 interface CryptoPrice {
