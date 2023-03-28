@@ -23,7 +23,9 @@ export class CryptoPricesComponent implements OnInit {
 
   ngOnInit() {
     this.http
-      .get<CryptoPrice[]>('http://127.0.0.1:8000/currencies')
+      .get<CryptoPrice[]>(
+        'https://py-coding-allstars-production.up.railway.app/currencies'
+      )
       .subscribe((data) => {
         this.dataSource.data = data;
       });
