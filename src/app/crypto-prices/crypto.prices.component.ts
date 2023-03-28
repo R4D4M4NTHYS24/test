@@ -1,11 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { enviroment } from 'src/enviroments/enviroment';
 import { MatTableDataSource } from '@angular/material/table';
 
 interface CryptoPrice {
   name: string;
-  price: number;
+  current_price: number;
+  image: string;
 }
 
 @Component({
@@ -14,25 +15,17 @@ interface CryptoPrice {
   styleUrls: ['./crypto-prices.component.css'],
 })
 export class CryptoPricesComponent implements OnInit {
+  @Output() cryptoData = new EventEmitter<CryptoPrice[]>();
   displayedColumns: string[] = ['name', 'price'];
   dataSource = new MatTableDataSource<CryptoPrice>([]);
 
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
-    interface PriceData {
-      bitcoin: number;
-      ethereum: number;
-      litecoin: number;
-    }
-
     this.http
-      .get<PriceData>(`${enviroment.apiUrl}/prices`)
+      .get<CryptoPrice[]>('http://127.0.0.1:8000/currencies')
       .subscribe((data) => {
-        const cryptoPrices: CryptoPrice[] = Object.entries(data).map(
-          ([name, price]) => ({ name, price })
-        );
-        this.dataSource.data = cryptoPrices;
+        this.dataSource.data = data;
       });
   }
 }
